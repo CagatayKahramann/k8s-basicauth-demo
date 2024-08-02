@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nextjs-dashboard-deployment
+  labels:
+    app: nextjs-dashboard
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nextjs-dashboard
+  template:
+    metadata:
+      labels:
+        app: nextjs-dashboard
+    spec:
+      containers:
+      - name: nextjs-dashboard
+        image: cagataykahraman/nextjs-dashboard-template:1
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nextjs-dashboard-service
+spec:
+  selector:
+    app: nextjs-dashboard
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
