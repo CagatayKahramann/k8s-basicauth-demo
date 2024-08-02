@@ -123,7 +123,4 @@ f you choose to deploy this on your own Kubernetes cluster instead of Minikube, 
   - If the authentication popup does not appear, check the Ingress annotations for typos.
   - Verify the secret was created correctly: `kubectl get secret basic-auth -o yaml`.
 
-- **Service not reachable:**
-  - 
-
 For more detailed information and troubleshooting, refer to the [Kubernetes documentation](https://kubernetes.io/docs/).
