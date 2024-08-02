@@ -1,7 +1,7 @@
 # k8s-basicauth-demo
 
 ## Introduction
-This project demonstrates the deployment of a Next.js dashboard application using Kubernetes, with basic authentication enabled via Ingress. The deployment utilizes Minikube for local development and testing.
+This project demonstrates the deployment of a Next.js dashboard application using Kubernetes, with basic authentication enabled via Ingress. The deployment utilizes Minikube for local development and testing. When you navigate to the URL address defined in the Ingress resource, the browser will prompt you for a username and password.
 
 ## Description
 The Next.js dashboard application is containerized and deployed on a Kubernetes cluster. The deployment includes:
@@ -96,6 +96,15 @@ If you decide to use Minikube, follow these steps to set up your environment:
 6. **Access the Application:**
    Open your browser and navigate to `http://nextjs-dashboard.local`. You will be prompted for a username and password. Use the credentials created with `htpasswd` to login.
 
+   **Note:** Due to the image being pulled from Docker Hub, it might take a while for the pod to run, and during this process if you navigate to the URL it will not work correctly. To check the pod status, run the following commands:
+   ```bash
+   # Get your pod id using this command:
+    kubectl get pods
+
+    # Use this command to see the status of the pod. Use the pod id you got from the previous command
+    kubectl describe pod <your-pod-id>
+   ```
+
 ## Deploying on Your Own Cluster
 
 f you choose to deploy this on your own Kubernetes cluster instead of Minikube, ensure that you have an Ingress controller installed on your cluster. The setup steps remain the same, but you may need to adjust the domain name in the Ingress configuration and update your DNS settings accordingly.
@@ -113,5 +122,8 @@ f you choose to deploy this on your own Kubernetes cluster instead of Minikube, 
 - **Basic Authentication**:
   - If the authentication popup does not appear, check the Ingress annotations for typos.
   - Verify the secret was created correctly: `kubectl get secret basic-auth -o yaml`.
+
+- **Service not reachable:**
+  - 
 
 For more detailed information and troubleshooting, refer to the [Kubernetes documentation](https://kubernetes.io/docs/).
