@@ -77,7 +77,7 @@ If you decide to use Minikube, follow these steps to set up your environment:
    ```bash
    kubectl apply -f nextjs-dashboard-deployment.yaml
    ```
-   If you need to customize the deployment, such as changing the image or ports, modify the `nextjs-dashboard-deployment.yaml` file accordingly. For the default image the `targetPort: 3000` should be kept as is because the app doesn't work correctly otherwise.
+   If you need to customize the deployment, such as changing the image or ports, modify the `nextjs-dashboard-deployment.yaml` file accordingly. For the default image the `targetPort: 3000` should be kept as it is because the app doesn't work correctly otherwise.
 
 4. **Apply the Ingress:**
    
