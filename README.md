@@ -54,7 +54,7 @@ If you decide to use Minikube, follow these steps to set up your environment:
    
 ## Setup
 
-**Important Note**: During the setup process, it is crucial to apply the manifests in the correct order, one by one, to ensure proper configuration.
+During the setup process, it is crucial to apply the manifests in the correct order, one by one, to ensure proper configuration.
 
 1. **Clone the Repository:**
    ```bash
@@ -95,13 +95,13 @@ If you decide to use Minikube, follow these steps to set up your environment:
 
 6. **Access the Application:**
    Open your browser and navigate to `http://nextjs-dashboard.local`. You will be prompted for a username and password. Use the credentials created with `htpasswd` to login.
-
-   **Note:** Due to the image being pulled from Docker Hub, it might take a while for the pod to run, and during this process if you navigate to the URL it will not work correctly. To check the pod status, run the following commands:
+   
+   **Important Note:** Due to the image being pulled from Docker Hub, it might take a while for the pod to run, and during this process if you navigate to the URL it will not work correctly. To check the pod status, run the following commands:
    ```bash
-   # Get your pod id using this command:
+   # Get your pod id using this command.
     kubectl get pods
 
-    # Use this command to see the status of the pod. Use the pod id you got from the previous command
+    # Use this command to see the status of the pod. Use the pod id you got from the previous command.
     kubectl describe pod <your-pod-id>
    ```
 
