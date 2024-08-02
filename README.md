@@ -1,6 +1,6 @@
 # k8s-basicauth-demo
 
-## Overview
+## Introduction
 This project demonstrates the deployment of a Next.js dashboard application using Kubernetes, with basic authentication enabled via Ingress. The deployment utilizes Minikube for local development and testing.
 
 ## Description
@@ -14,7 +14,7 @@ This setup is ideal for developers looking to understand how to deploy a web app
 The dashboard used in this project is a default template from [NextAdminHQ/nextjs-admin-dashboard](https://github.com/NextAdminHQ/nextjs-admin-dashboard).
 
 ## Table of Contents
-- [Overview](#overview)
+- [Introduction](#introduction)
 - [Description](#description)
 - [Table of Contents](#table-of-contents)
 - [Prerequisites](#prerequisites)
