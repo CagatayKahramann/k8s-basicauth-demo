@@ -59,8 +59,8 @@ If you decide to use Minikube, follow these steps to set up your environment:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/nextjs-dashboard.git
-    cd nextjs-dashboard
+   git clone https://github.com/CagatayKahramann/k8s-basicauth-demo.git
+   cd k8s-basicauth-demo
    ```
 
 2. **Create the htpasswd File and Secret:**
