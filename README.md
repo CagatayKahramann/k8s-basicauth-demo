@@ -102,8 +102,6 @@ f you choose to deploy this on your own Kubernetes cluster instead of Minikube, 
 
 ## Troubleshooting
 
-## Troubleshooting
-
 - **Minikube Issues**:
   - If Minikube fails to start, ensure you have virtualization enabled on your machine.
   - Check Minikube logs for errors: `minikube logs`.
