@@ -50,7 +50,7 @@ If you decide to use Minikube, follow these steps to set up your environment:
 2. **Enable Metrics Server**:
    Enable the metrics server addon within Minikube:
    ```bash
-   minikube addons enable metrics-server
+   minikube addons enable ingress
    ```
    
 ## Setup
